@@ -67,6 +67,12 @@ nav ul
 	flex: 1 1 auto;
 }
 
+
+nav ul a:hover
+{
+	color: #000000;
+}
+
 .menu
 {
 	margin: 15px 15px;
@@ -368,6 +374,11 @@ nav ul
 
 /*clients*/
 
+#prevbtn, #nextbtn:hover
+{
+	cursor: pointer;
+}
+
 #clients
 {
 	display: flex;
@@ -406,11 +417,14 @@ nav ul
 .feedback
 {
 	width: 65%;
-	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-/*	flex-wrap: wrap;*/
+	display: none;
+}
 
+.showfeedback
+{
+	display: flex;
 }
 
 .client
@@ -461,7 +475,7 @@ nav ul
 	font-weight: 700;
 }
 
-#pic
+.pic
 {
 	width: 100px;
 	height: 100px;
@@ -470,9 +484,30 @@ nav ul
 
 	margin-bottom: 10px;
 
-	background-image: url("..//images/client1.jpg");
-	background-size: contain;
+    background-position: center;
+	background-size: cover;
 }
+
+.pic1
+{
+	background-image: url("..//images/client1.jpg");
+}
+
+.pic2 
+{
+    background-image: url("..//images/client2.png");
+}
+
+.pic3 
+{
+    background-image: url("..//images/client3.png");
+}
+
+.pic4 
+{
+    background-image: url("..//images/client4.jpg");
+}
+
 
 #logobelt
 {
@@ -488,15 +523,17 @@ nav ul
 	margin: 50px 25px 0;
 	opacity: 0.5;
 	border-bottom: 4px solid transparent;
+	cursor: pointer;
 }
 
-.logos:hover
+.activelogo
 {
 	opacity: 1;
 	border-bottom: 4px solid #e3c58d;
 	box-sizing: border-box;
 	cursor: pointer;
 }
+
 
 /*contact*/
 
@@ -541,6 +578,8 @@ nav ul
 
 	text-align: center;
 	vertical-align: center;
+
+    cursor: pointer;
 }
 
 #contact hr
@@ -597,20 +636,18 @@ nav ul
 }
 
 
-#proj_det
-{
-	height: 165px;
-	width: 100%;
-
-	resize: none;
-
-	margin-bottom: 20px;
-	padding: 10px;
-	border: 3px solid #b5845e;
-	box-sizing: border-box;
-	line-height: normal;
-	font-size: 16px;
-	outline: none;
+#proj_det {
+    height: 165px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 3px solid #b5845e;
+    box-sizing: border-box;
+    line-height: normal;
+    font-size: 16px;
+    outline: none;
+    font-family: "Open Sans";
 }
 
 #subm
@@ -644,6 +681,7 @@ nav ul
 	line-height: normal;
 	font-size: 16px;
 	outline: none;
+    font-family: "Open Sans";
 }
 
 #letswork form input:focus, #proj_det:focus
